@@ -1,0 +1,13 @@
+before every componenet load, do an api call with the current session id, such that if its login, the prop is username, and if its guest, the prop is 'guest'
+if auth == 0: 
+aut == 1
+set hidden components true
+
+
+valid user
+set hidden components false
+auth == 2:
+guest user, set hidden componenets true
+
+
+

@@ -1,0 +1,54 @@
+
+
+commands:
+
+guest login:
+
+on welcome
+search for guest button
+click on guest button
+
+
+
+
+usecase:
+
+
+homepage guest user:
+
+
+run all the home page tests in the previous assignment: 11 Test Cases, modify to ensure that that the 5questions match cypress test, that is the nessecity of opualte db js
+
+
+
+plus 2 test cases:
+
+search for next button and clcick and check for 3 questions only
+search for prev button and click and check for 5 questions
+
+
+
+The user has entered the home page as a guest user. The home page displays a menu with options to view all questions, view all tags, and a search box to search for questions. Further, the user should be able to view the questions in Newest, Active, and Unanswered order. The meaning of these options is the same as in the programming assignments. By default, the home page shows a list of all questions in Newest order. For each question in the list it displays: 1. the question title, 2. question summary, 3. list of associated tags, 4. the no. of views and votes, 5. the no. of answers, 6. the username of the user who posted the question, and 7. the date it was posted. The format of the date and the username is the same as in the programming assignments. The question title is a link which when pressed shows the answers for that question.
+
+
+usecase:
+
+
+registered guest user:
+
+Same as guest, but with add button click test
+
+
+
+run all the home page tests in the previous assignment: 11 Test Cases, modify to ensure that that the 5questions match cypress test, that is the nessecity of opualte db js
+
+
+
+plus 2 test cases:
+
+search for next button and clcick and check for 3 questions only
+search for prev button and click and check for 5 questions
+
+
+
+The user has entered the home page as a guest user. The home page displays a menu with options to view all questions, view all tags, and a search box to search for questions. Further, the user should be able to view the questions in Newest, Active, and Unanswered order. The meaning of these options is the same as in the programming assignments. By default, the home page shows a list of all questions in Newest order. For each question in the list it displays: 1. the question title, 2. question summary, 3. list of associated tags, 4. the no. of views and votes, 5. the no. of answers, 6. the username of the user who posted the question, and 7. the date it was posted. The format of the date and the username is the same as in the programming assignments. The question title is a link which when pressed shows the answers for that question.

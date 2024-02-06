@@ -1,0 +1,411 @@
+Create Account
+
+Actors Unregistered user
+
+Preconditions The user has a working internet connection, is viewing the welcome page, and is not logged in.
+
+Postconditions A new account is created for the user with their username, a secret password, and an account name (email).
+
+Story The user is at the welcome page where they see options: 1. to register as a new user, 2. login as an existing user, or 3. continue as a guest user. The user selects option 1. They should be able enter their username, email, and a secret password. They should be able to verify the entered password via a repeat password field. There should be a sign-up button, which when pressed will create the user’s profile. They are then directed to a Login page.
+
+Exceptions No two users can create an account with the same email or username. The email should have a valid form. The typed password should not contain the username or the email. Feedback must be presented to the user if the account could not be created.
+
+Additional notes The user profile must be stored in a database. A user’s personal information can only be accessed by the user. A valid email address must be of the form local-part@domain. The local-part must be one or more characters and domain must be a domain name (e.g., northeastern.edu). 
+
+
+Test Check:
+
+
+
+Check for Register Login and Guest at Welcome DONE
+Check for Repeat Password Field NOT DONE
+Check for Sign up DONE
+
+Check Login for Valid and Invalid DONE
+Check Register for Valid and Invalid DONE
+Check Invalid Registration Credenitals (email and username) NOT DONE(EMAIL check)
+
+
+
+Login
+
+Actors Registered user
+
+Preconditions The user has a working internet connection, is viewing the welcome page, and is not logged in.
+
+Postconditions Login successful or failed.
+
+Story The user arrives at the welcome page and selects the option to login. Next, they should be able to enter their username and password and login. If login is successful, they should be able to view the home page.
+
+Exceptions Give feedback to the user if they enter an unregistered username or an incorrect password. The user should stay in the login pag
+
+
+
+Test Check: 
+
+
+CHeck for valid Login valid Credentials DONE
+Check for invalid login credentials DONE
+
+
+
+Logout of account
+
+Actors Registered user
+
+Preconditions The user has a working internet connection, and is currently logged into the application.
+
+Postconditions The user logs out of the application.
+
+Story The user is at a page with a logout button. They click on the logout button and the user is taken back to the welcome page if log out was successful.
+
+Exceptions The application should give appropriate feedback to the user if the log out failed, and stay on the same page from where the logout was issues. 
+
+
+
+Test Check:
+
+
+Take back to welcome page after logout DONE
+
+
+
+Home Page
+
+Actors Guest user
+
+Preconditions The user has a working internet connection, is viewing the home page, and is not logged in.
+
+Postconditions The home page.
+
+Story The user has entered the home page as a guest user. The home page displays a menu with options to view all questions, view all tags, and a search box to search for questions. Further, the user should be able to view the questions in Newest, Active, and Unanswered order. The meaning of these options is the same as in the programming assignments. By default, the home page shows a list of all questions in Newest order. For each question in the list it displays: 1. the question title, 2. question summary, 3. list of associated tags, 4. the no. of views and votes, 5. the no. of answers, 6. the username of the user who posted the question, and 7. the date it was posted. The format of the date and the username is the same as in the programming assignments. The question title is a link which when pressed shows the answers for that question.
+
+Exceptions The application should show an error message to the user in case of a system failure or a communication failure. In case of an error, the user should be given a way to go back to the welcome page and restart.
+
+Additional notes The page must display only 5 questions at a time. The list of questions must be scrollable to fit all the 5 questions if they overflow. For more than 5 questions 2 buttons – next, and prev must be displayed at the bottom of the list. The next button must display the next 5 questions, prev displays the previous 5. Pressing button next should display the first 5 questions when the last 5 questions are shown. However, when displaying the first 5, prev is disabled. Bot
+
+Test Check:
+
+
+1. Home Page guest Tests (All) DONE
+2. Pagination Tests (All) DONE
+3. Test if there is a 500 error on state render return Welcome Page NOT DONE(FOR AXIOS LOGIN PAGE FAIL)
+4. Order ORDER NOT DONE
+5. no add quesiton test 
+
+
+
+Home Page
+
+Actors Registered user
+
+Preconditions The user has a working internet connection, is viewing the home page, and is logged in.
+
+Postconditions The contents of the home page or the welcome page if there is an error.
+
+Story The home page should be the same as guest user, except the user should be able to post a new question.
+
+Exceptions Same as guest user scenario.
+
+Additional notes The questions should be displayed like the guest user scenari
+
+
+ 
+Test Check:
+
+1. Home Page Reg User Test DONE
+2. Test for Add QUestion Button DONE
+3. ALl of the above DONE
+
+
+Searching
+
+Actors Registered user, Guest user.
+
+Preconditions The user has a working internet connection and is viewing the home page.
+
+Postconditions The user is shown a set of questions that match the search criteria.
+
+Story In the search box, the user enters search text. The constraints for valid search text are the same as described in the assignments. All questions that match the search must be shown. The user must be able to select newest, active, and unanswered. They mean the same as defined in the assignments.
+
+Exceptions Show “no results found” in case of search failure.
+
+Additional notes Every time the user searches, the search results must be displayed in Newe
+st order. They should be able to further filter the results based on active questions and unanswered questions. The search results are displayed 5 at a time with buttons to view the next and previous as described in the Home page use case. 
+
+Test Check:
+
+
+1. Word Search NOT DONE - PREVIOUS ASSIGNMENT
+2. Tag Search NOT DONE - PREVIOUS ASSIGNMENT
+3. Sort Select based ranbking(newest, unanswered, active);
+4. See no results found NOT DONE
+
+
+All Tags
+
+Actors Registered user, Guest user.
+
+Preconditions The user has a working connection and is viewing the home page.
+
+Postconditions Shows all tags in the database.
+
+Story When the user selects the Tags option, a set of all tag names is displayed to the user. Each tag name in the set is a link and shows the no. of questions associated with the tag. Upon clicking a link, the set of questions associated with the tag name is displayed in newest order same as home page.
+
+Exceptions Show an error message and stay on the same page if there is a system or communication failure. 
+
+
+
+
+Test CHecks:
+
+
+All Tags 1-4 from previous assignment NOT DONE - PREVIOUS ASSIGNMENT
+
+
+New Question
+
+Actors Registered user.
+
+Preconditions The user has a working internet connection, is logged in, and has clicked on the add new question option in the home page.
+
+Postconditions The new question created by the user is added to the database and is displayed with the existing set of questions.
+
+Story The user creates a new question with the title, summary, question text, and one or more tag names separated why whitespace. The constraints on the question fields are same as the assignments. Pressing the new question button, posts the question to the database and renders the home page, which displays the new question along with existing questions. If the questions are displayed in Newest order, then the new question is the first question displayed.
+
+Exceptions An error message should be displayed and the user should stay on the same page if any specified constraint is not met.
+
+Additional notes New tags can only be added by users with reputation of 50 or more. 
+
+
+
+Test CHecks:
+
+
+
+Add Question Low Rep Reg User - Tag should not show up if new 	TEST WRITTEN, NOT PASSING
+Add Questoin button should be there - DONE
+Add Quesiton Validtion Checks  - DONE
+Add Quesiton should go back to home page and check DONE
+Newest Order check DONE
+
+
+Answers
+
+Actors Guest user.
+
+Preconditions The user has a working internet connection and has clicked on a question in the home page as a guest.
+
+Postconditions Show the question details and all its answers.
+
+Story The user has entered the Answers page and sees a menu described in the home page use case. Question Details: The page displays the question title, the total no. of answers, the total no. of views (including the current view), the question text, the set of tags, the username of the user who asked the question, the date and time the question was asked (same format as before), and the no. of votes the question has received. The set of comments for a question is listed below the question text and its tags set. (see later for comments use case.) Answers: Below the question details section, the page lists a scrollable set of all answers for the question. The most recent answer should appear first. Each answer has the answer text, the no. of votes received, and the username of the answer provider, the date and time (same format as questions). Answers must be displayed like questions in the home page – 5 at a time. Answers also have a set of comments. They should be listed below each answer (see comments use case).
+
+Exceptions An error message is displayed if the expected data could not be rendered due to system or communication failure. 
+
+
+Test Checks:
+
+
+1. Quesiton Stats DONE
+2. Question Comments DONE 
+3. Answer Comments DONE
+4. ANswer Stats DONE
+5. No add answer button DONE
+6. NO upvote and downvote button DONE
+7. Answer Pagination Test  DONE
+8. Comment Pagination TestDONE 
+
+
+
+
+Answers
+
+Actors Registered user.
+
+Preconditions The user has a working internet connection, is viewing the answers page for a particular question, and is logged in.
+
+Postconditions Show questions details and all its answers.
+
+Story Same as Answers for guests, except a button to add new answers is displayed below all the answers, in a separate section. This button is outside the scrollable list of answers. The question and each answer have options to upvote and downvote the question or answer. Upvoting increases the vote by 1 and downvoting decreases the vote by 1. Upvoting a question/answer increases the reputation of the corresponding user by 5. Downvoting a question/answer decreases the reputation of the corresponding user by 10. A user can vote if their reputation is 50 or higher. A registered user should be able to accept one of the answers to the question they posted. An accepted answer must appear at the top of an answer list. All remaining answers will be in newest order.
+
+Exceptions An error message is displayed if any of the constraints above are violated or there is a database or a communication error.
+
+Additional notes A question may not have accepted answers, in which case no answer needs to be pinned to the top. The ability to accept answers for a user must appear only if the user is viewing a question they posted. Voting on a question/answer makes the question active. 
+
+
+Test Checks:
+
+1. Quesiton Stats DONE - COPY PASTE
+2. Question Comments DONE COPY PASTE
+3. Answer Comments DONE
+4. ANswer Stats DONE
+5. add answer button DONE
+6.  upvote and downvote button DONE
+7. Answer Pagination Test  DONE
+8. Comment Pagination Test DONE
+9. ANswer Addition button is present - invalid answer DONE
+10. ANswer addition button is present : low rep DONE
+10. ANswer adidtion button is present - valid answer and goes to the top DONE
+11. ANswer upvote is there and can be upvoted and rep is affected DONE
+12. Answer downvote is there and can be downvoted and rep is affected DONE
+13. Answer can be pinned button is there, and it adds PINNED ANSWER TO THE ANSWER, and adds it to the top of the answer list.  DONE
+
+
+
+Comments
+
+Actors Guest user.
+
+Preconditions The user has a working internet connection and is seeing the answers page for a question as a guest.
+
+Postconditions Shows all comments.
+
+Story A question or an answer has comments. The most recent comment is displayed first. For both questions and answers, 3 comments are displayed at a time with the username of the commenters and the number of votes for the comment. Two buttons – next and prev display the next 3 comments and the previous 3 comments, respectively. The next button shows the first 3 comments when the last 3 comments are shown and the prev button is disabled when the first 3 comments are shown.
+
+Exceptions Failure to retrieve comments must show an error message in the comments section.
+
+ 
+Test Checks: 
+
+
+1. Comment Stats DONE
+2. Comment Order DONE
+3. Comment Pagination DONE
+4. NO POST COMMENT - DONE
+
+Comments
+
+Actors Registered user.
+
+Preconditions The user has a working internet connection, is logged in, and is seeing the answers page.
+
+Postconditions Shows all comments.
+
+Story Comments are displayed like the guest user scenario. An input field shown below the comments view allows a logged in user to add a new comment. The new comment is added to the database and displayed on pressing enter. A logged in user can upvote a comment if they find the comment useful. Upvoting a comment increments the votes of a comment by 1. A button to upvote a comment is displayed with a comment so logged in users can show their approval. Downvoting on comments is not allowed.
+
+Exceptions A new comment is rejected if - it is more than 140 characters - it is added by a user with less than 50 reputation points. Display an error message to let the user know that the comment was rejected.
+
+Additional notes Upvoting a comment has no impact on reputation. Upvoting a comment makes the corresponding question active.
+
+
+1. Comment Stats DONE
+2. Comment Order DONE
+3. Comment Pagination DONE
+4. Comment Impact on Rep DONE
+5. Add comment section, and rep check fail NOT DONE
+6. Add COmment seciton, and length check fail NOT DONE
+7. comment upvote and stat check  DONE
+
+
+
+New Answer
+
+Actors Registered user.
+
+Preconditions The user has a working internet connection, is seeing the new answers page, and is logged in.
+
+Postconditions The new answer posted by the user is added to the database.
+
+Story The user has entered the new question page. They see a menu as described in the home use case. A form with a text field is shown for the user to enter their answer and a button which when pressed saves the answer in the database. After posting the answer the user is taken back to the answers page for the question where they can see the new answer.
+
+Exceptions An error message should be displayed to let the user know if the answer was rejected.
+
+Additional notes Posting an answer makes the question active.
+
+
+
+	Answer Button check  DONE
+	Answer NO REP CHECK NOT DONE
+	new answer goes back to answers page and is searched for DONE
+	Answer validation check DONE
+	Check quesiton activity and sorting after posting answer. DONE, SHOW UPVOTE AND DOWNVOTE INSTEAD
+	
+User Profile
+
+Actors Registered user.
+
+Preconditions The user has a working internet connection, is viewing the user profile page, and is logged in.
+
+Postconditions The user profile of the currently logged in user.
+
+Story The page displays user information and a menu like the home page. User Information: - Number of days the user has been a member of fake stack overflow
+
+
+
+- the reputation points of the user. Menu: - A link to view all questions posted by the user. - A link to view all tags created by the user. - A link to view all answers. Questions posted by the user: Displays a set of question titles asked by the user in newest order. Display 5 at a time with next and prev buttons like the home page. Each question title is a link which when clicked shows the new question page. In this page the user can modify the existing question and repost it or delete it. Tags created by the user: The set of tags are displayed in the same format as described in the tags page. Additionally, a tag entry has an option for the user to delete or edit the tag. Answers created by the user: All answers are displayed as links of 50 characters. Recently created answer must be displayed first. Pressing the link, shows the new answer form pre-filled with the answer. The user can edit or delete the answer.
+
+Exceptions Display an error message to inform the user that their action failed. Remain on the same page from which the action was performed.
+
+Additional notes. - Reposting a question must not change the original date of posting the question. - Reposting a question makes the question active. - Deleting a question will delete all answers and comments associated with it. - Editing a tag’s name must reflect in all questions associated with the tag. - Deleting a tag will delete the tag from all associated questions. - Editing or deleting a tag is not allowed if the tag is being used by other users, that is, users who did not create the tag. - Editing or deleting a tag is not considered new activity for the question. - Deleting an answer also deletes its votes and comments. - Editing an answer must not change its original posting date. - Deleting an answer has no effect on reputation points. - Reposting or deleting an answer makes the corresponding question active. 
+	
+Test for Metrics
+Test For menu links
+Test for 	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,770 @@
+.logo-selector {
+    display: flex;
+    justify-content: left;
+    width: 20px;
+    height: 30px;
+    padding-left: 100px;
+}
+
+.side-bar{
+    background-color: #f4ede4;
+    width: 200px;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.side-bar-links{
+    margin-left: 100 px;
+    font-family: 'Helvetica';
+    padding-bottom: 20px;
+}
+
+.navbar-selector{
+    padding-left: 60%;
+    margin-top: -6px;
+    margin-left: 0px;
+    width: 100%;
+    border-top: 1px solid rgb(240, 86, 25);
+    border-bottom: 1px solid rgb(230, 229, 229);
+}
+
+ul { 
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+li {
+    float: left;
+}
+
+/* .searchbar-container{
+    border-top: orangered;
+    margin-top: -38px;
+    padding-left: 560px;
+} */
+
+.searchBar{
+    border-top: orangered;
+    margin-top: -38px;
+    padding-left: 300px;
+}
+.searchBtn{
+  background-color: #1d8ee4; 
+  border-radius: 8px; 
+  margin-left: 5px;
+  color: white;
+  font-family: Helvetica;
+  text-decoration: none;
+  padding: 5px 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  width: 12%;
+  cursor: pointer;
+}
+.nav-bar-Btn{
+    background-color: #dbe0e2; 
+    border-radius: 2px; 
+    margin-left: 0px;
+    color: rgb(11, 1, 1);
+    font-family: Helvetica;
+    text-decoration: none;
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    width: 12%;
+    cursor: pointer;
+  }
+
+li a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.wd-grid-row-1 {
+    clear: both;
+}
+
+.wd-grid-row-2 {
+    clear:both;
+    margin-bottom: 65px;
+}
+.wd-grid-question-row{
+    clear:both;
+    margin-bottom: 25px;
+    /* border-color: darkgray; */
+    border-color: #696e6a;
+    border-top-style: dotted;
+    /* background-color: rgb(54, 179, 131); */
+}
+
+.wd-flex-question-row-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.main{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 0px ;
+}
+
+
+.page-results-title{
+    text-align: left;
+    font-family: Helvetica;
+    margin-top: 18px;
+    color: black;
+    font-size: 28px;
+    font-weight: 2px;
+}
+.a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0077B5;       /* Set the link color to a specific color (e.g., LinkedIn blue) */
+    margin-right: 10px;   /* Add some spacing to the right of the links */
+}
+
+
+.stackoverflow-title{
+    font-family: Helvetica;
+    /* margin-top: 18px;
+    margin-left: 10px;  */
+    color: black;
+    font-size: 28px;
+    font-weight: 2px;
+}
+
+.page-count{
+    font-family: Helvetica; 
+    text-align: left;
+    margin-top: 15px;
+    font-weight: 3px;
+    font-size: 18px; 
+    color: rgb(86, 86, 86);
+
+}
+
+.q-post{
+    max-width: 500px;
+    min-width: 500px;
+    /* background-color: rgb(163, 21, 158) ; */
+    flex-grow: 2;
+}
+
+.postTitle{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Helvetica;
+    font-size: 18px;
+    color: rgb(11, 142, 212);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+.postTag{
+    display:flex;
+    float:left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10%; 
+    padding: 5px 5px; 
+    font-size: 12px;
+    background-color: #cbe1ec; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(189, 242, 254);
+    color: #176497; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tags-container {
+    text-decoration: underline;
+    color: #176497; 
+    padding-bottom: 20px;
+    padding: 10%;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.allTags{
+    display:table-row;
+    float:left;
+    margin-left: 80px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10%; 
+    padding: 20px 20px; 
+    font-size: 20px;
+    background-color: #cbe1ec; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(189, 242, 254);
+    color: #d37f18; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.postStats{
+    max-width: 90px;
+    min-width: 90px;
+    color:rgb(147, 142, 142);
+    font-size: 12px;
+    /* background-color: orange ; */
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-grow: 1;
+}
+
+.lastActivity{
+    display: flex;
+    max-width: 550px;
+    min-width: 550px;
+    justify-content: left; 
+    align-items: center;
+    /* background-color:pink ; */
+    flex-grow: 3;
+    
+}
+
+.username{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:maroon;
+    margin-right: 5px;
+}
+
+.askdate{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(14, 54, 231);
+}
+
+
+.wd-metrics-flex-grow-1{
+    flex-grow: 1;
+}
+
+.wd-flex-grow-2{
+    flex-grow: 3;
+}
+
+.wd-flex-grow-3{
+    flex-grow: 3;
+}
+
+.wd-flex-question-2-row-title-tag-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-grid-col-half-page { 
+   width: 50%;
+   display: flex;
+   flex-direction: row;
+   float: left;
+}
+
+.rightbody{
+   width: 80%;
+   float: left;
+}
+.wd-grid-col-third-page { 
+   width: 53%;
+   float: left; 
+}
+
+.wd-grid-col-two-thirds-page {
+   width: 10%;
+   margin-left: 120px;
+   margin-bottom: 5px;
+   float: left; 
+   background-color: #eff492;
+}
+
+.add-question-btn{
+  margin-left: 900px;
+  margin-top: -60px;
+  background-color: #1d8ee4; 
+  border-radius: 10px; 
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.logout-btn{
+    margin-left: 900px;
+    margin-top: -60px;
+    background-color: rgb(220, 133, 27);
+    border-radius: 10px; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+
+  
+.wd-fg-color-black { color: black; } 
+.wd-fg-color-white { color: black; }
+.wd-fg-color-blue { color: #7070ff; } 
+.wd-fg-color-red { color: #ff7070; } 
+.wd-fg-color-green { color: green; }
+
+/* .wd-bg-color-pink 
+{ background-color: #ff07c5;
+} 
+.wd-bg-color-blue {
+    background-color: #7070ff; 
+}
+.bg-color-pink { 
+    background-color: #ff07c5;
+
+} 
+.bg-color-yellow {
+    background-color: #e0ff70; 
+}
+
+.bg-color-orange {
+    background-color: #f49134; 
+} */
+/* .wd-bg-color-red { 
+     background-color: #ff7070; 
+} 
+
+.wd-bg-color-green {
+     background-color: green; 
+ } */
+
+.sideBarNav {
+   display: flex;
+   flex-direction: column;
+   margin-top: 36px;
+   margin-left: 30px;
+   width: 10%;
+   height: 100%;
+   float: left;
+   background-color: #d5d9d6;
+}
+
+.wd-grid-col-main-content {
+   padding: 0px;
+   margin-top: 16px;
+   margin-left: 90px;
+   width: 80%;
+   height: 100%;
+   float: left; 
+   border-left-width: 2px;
+   border-left-color:#cdd4cd;
+   /* background-color: #92f494; */
+   /* border-left-color:#20ad20; */
+   border-left-style: dotted;
+}
+
+.sort-nav-bar{
+    margin-left: 10px;
+    width: 100%;
+    float: left;
+}
+
+.stats-format{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.menu{
+    margin: 0;
+    padding: 8px;
+    height: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(206, 202, 202);
+    width: 75%
+}
+
+.menu li{
+    display: inline;
+}
+
+.sort-nav-button{
+    margin-left: 35px;
+    background-color: #bbbfc1; 
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: rgb(238, 234, 229);
+    border-left-color: rgb(238, 234, 229);
+    justify-content: center;
+    font-family: Helvetica;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: none;
+    color: #ffffff;
+    padding: 10px;
+    margin-right: 0px;
+    /* padding-top: 5px;
+    padding-right: 10px; 
+    padding-bottom: 1px;
+    padding-left: 20px; */
+    /* TODO: divide category sections; */
+    height: 20px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+.new-question-page {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.postQuestionBtn{
+  background-color: #1d8ee4; 
+  border-radius: 8px; 
+  margin-left: 5px;
+  color: white;
+  font-family: Helvetica;
+  text-decoration: none;
+  padding: 5px 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  width: 12%;
+  cursor: pointer;
+
+}
+
+.new-question-page {
+    padding-top: 15px;
+    margin-top: 16px;
+    width: 80%;
+    height: 100%;
+    float: left; 
+ }
+
+label{
+    margin-left: 10px;
+    font-family: Helvetica;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 2px;
+}
+
+
+.error-msg{
+    margin-top: 30px;
+    font-family: Helvetica;
+    color:rgb(255, 30, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+mandatory-message{
+    margin-left: 800px;
+    font-family: Helvetica;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 2px;
+    color: red
+}
+
+.form-hints{
+    font-family: Helvetica;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 2px;
+    font-style: italic;
+}
+
+.new-answer-page {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 16px;
+    background-color: rgb(213, 212, 212);
+    width: 80%;
+    height: 100%;
+    float: left; 
+ }
+
+ .postAnswerBtn{
+    margin-top: 10px;
+    background-color: #1d8ee4; 
+    border-radius: 8px; 
+    margin-left: 5px;
+    color: white;
+    font-family: Helvetica;
+    text-decoration: none;
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    width: 12%;
+    cursor: pointer;
+  }
+
+  .welcome-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-color: rgb(237, 235, 236)
+  }
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-color: rgb(212, 206, 209)
+  }
+  
+.login-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.welcome-header {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Helvetica;
+}
+  
+.login-input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+  
+.login-button {
+    padding: 10px 15px;
+    background-color: rgb(220, 133, 27);
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+  .welcome-button {
+    padding: 10px 15px;
+    background-color: rgb(220, 133, 27);
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+  .login-button-2 {
+    padding: 10px 15px;
+    background-color: rgb(27, 133, 220);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+.login-button:hover {
+    background-color: #0056b3;
+  }
+
+.login-button-2:hover {
+    background-color: #0056b3;
+ }
+
+.welcome-button:hover {
+    background-color: #0056b3;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-color: rgb(246, 240, 237)
+  }
+
+
+.register-header {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Helvetica;
+}
+.login-header {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Helvetica;
+}
+.register-label {
+    padding-top: 30px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Helvetica;
+}
+  
+.login-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.postSummary{
+    padding-top: 10px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Helvetica;
+    padding: 10px 15px;
+    color: rgb(16, 16, 19);
+    
+}
+
+.signup-button {
+    padding: 10px 15px;
+    background-color: rgb(220, 133, 27);
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .signup-button:hover {
+    background-color: #0056b3;
+}
+
+.user-metric-title{
+    text-align: left;
+    font-family: Helvetica;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: rgb(232, 90, 8);
+    font-weight: bold;
+    font-size: 25px;
+    font-weight: 40px;
+}
+
+.user-membership{
+    text-align: left;
+    font-weight: bold;
+    font-family: Helvetica;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    color: rgb(21, 68, 208);
+    font-size: 24px;
+    font-weight: 2px;
+}
+.user-rep{
+    text-align: left;
+    font-family: Helvetica;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(21, 68, 208);
+    font-size: 20px;
+    font-weight: 2px;
+}
+.user-welcome-title{
+    text-align: center;
+    font-family: Helvetica;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: rgb(60, 136, 251);
+    font-size: 25px;
+    font-weight: 2px;
+}
+
+.styled-link {
+    color: blue; 
+    text-decoration: underline;
+    cursor: pointer; 
+  }
+
